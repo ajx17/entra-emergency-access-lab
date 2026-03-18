@@ -1,8 +1,8 @@
 # Azure Identity & Security Lab
 
-> A hands-on lab demonstrating enterprise-grade Identity & Access Management (IAM) and
-> security hardening practices on Microsoft Azure / Entra ID — managed entirely through
-> code (Azure CLI & PowerShell), not the GUI.
+> A hands on lab demonstrating enterprise-grade Identity & Access Management (IAM) and
+> security hardening practices on Microsoft Azure / Entra ID  managed entirely through
+> code (Azure CLI & PowerShell)
 
 ---
 
