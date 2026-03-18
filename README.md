@@ -42,7 +42,7 @@ Microsofts emergency access best practices.
 > **Why exclude it from MFA?**
 > If your Identity Provider (e.g., Authenticator app, FIDO2 key) experiences an outage,
 > standard MFA enforced accounts become inaccessible locking you out of your own tenant
-> The break glass account deliberately bypasses this dependency. It is *not* for day to day
+> The break glass account deliberately bypasses this dependency. It is not for day to day
 > use. Its use must be logged, alerted on, and reviewed after every activation
 
 ---
@@ -116,13 +116,13 @@ cd C:\dev\Azure-Identity-Lab\scripts
 
 ## Security Notes
 
-- **No secrets or credentials are stored in this repository.**
-- Break glass account credentials are stored **offline only** (printed, sealed envelope
+- **No secrets or credentials are stored in this repository
+- Break glass account credentials are stored offline only (printed, sealed envelope
   in a physically secured location) per Microsoft's recommended guidance (I wanted to follow it as closely as I could lol)
-- All scripts use **least privilege** principles where possible; the break glass account
-  is the *only* account with standing Global Admin rights
-- Any activation of the break glass account should trigger an **Azure Monitor alert**
-  and be reviewed within 24 hours.
+- All scripts use least privilege principles where possible; the break glass account
+  is the only account with standing Global Admin rights
+- Any activation of the break glass account should trigger an Azure Monitor alert
+  and be reviewed within 24 hours
 
 ---
 
