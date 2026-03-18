@@ -8,13 +8,12 @@
 
 ## Purpose
 
-This lab demonstrates real world cloud identity security skills using Azure CLI and PowerShell.  
-Every decision includes the *why* behind it so the design can be defended in an engineering review
+This lab is made to demonstrate real world cloud identity security skills using Azure CLI and PowerShell, creating an emergency account through EntraID
 
 **Core competencies demonstrated:**
 
 | Pillar | What's Covered |
-| --- | --- |
+------------------------------
 | Identity Management | User provisioning and Entra ID role assignments via CLI/PowerShell |
 | Security Hardening | Emergency access account design and MFA exclusion rationale |
 | Governance | Standard Operating Procedures (SOPs) and audit trail documentation |
@@ -24,7 +23,7 @@ Every decision includes the *why* behind it so the design can be defended in an 
 
 ## Lab Components
 
-### Phase 1 — Emergency Access ("Break Glass")
+### Phase 1: Emergency Access ("Break Glass")
 
 A dedicated **Global Administrator break glass account** has been provisioned following
 Microsofts emergency access best practices.
@@ -34,7 +33,7 @@ Microsofts emergency access best practices.
 - Credentials stored offline per the SOP (see [`docs/break-glass-sop.md`](docs/break-glass-sop.md))
 - Account purpose: regain tenant access if all normal admin accounts are locked out
 
-### Phase 2 — Identity Governance Automation
+### Phase 2: Identity Governance Automation
 
 - `scripts/provision-break-glass.sh` validates/creates break glass account state
 - `scripts/assign-roles.ps1` assigns, removes, and lists Entra ID directory role memberships
