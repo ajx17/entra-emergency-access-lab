@@ -1,6 +1,6 @@
 # Azure Identity & Security Lab
 
-> A hands on lab demonstrating enterprise-grade Identity & Access Management (IAM) and
+> A hands on lab demonstrating enterprise grade Identity & Access Management (IAM) and
 > security hardening practices on Microsoft Azure / Entra ID  managed entirely through
 > code (Azure CLI & PowerShell)
 
@@ -8,8 +8,8 @@
 
 ## Purpose
 
-This lab demonstrates real-world cloud identity security skills using Azure CLI and PowerShell.  
-Every decision includes the *why* behind it so the design can be defended in an engineering review.
+This lab demonstrates real world cloud identity security skills using Azure CLI and PowerShell.  
+Every decision includes the *why* behind it so the design can be defended in an engineering review
 
 **Core competencies demonstrated:**
 
@@ -18,7 +18,7 @@ Every decision includes the *why* behind it so the design can be defended in an 
 | Identity Management | User provisioning and Entra ID role assignments via CLI/PowerShell |
 | Security Hardening | Emergency access account design and MFA exclusion rationale |
 | Governance | Standard Operating Procedures (SOPs) and audit trail documentation |
-| Infrastructure-as-Code | Repeatable script- driven configuration |
+| Infrastructure-as-Code | Repeatable script driven configuration |
 
 ---
 
@@ -36,7 +36,7 @@ Microsofts emergency access best practices.
 
 ### Phase 2 — Identity Governance Automation
 
-- `scripts/provision-break-glass.sh` validates/creates break-glass account state
+- `scripts/provision-break-glass.sh` validates/creates break glass account state
 - `scripts/assign-roles.ps1` assigns, removes, and lists Entra ID directory role memberships
 - `policies/conditional-access-notes.md` documents production policy target and lab tradeoffs
 
