@@ -18,7 +18,7 @@ Every decision includes the *why* behind it so the design can be defended in an 
 | Identity Management | User provisioning and Entra ID role assignments via CLI/PowerShell |
 | Security Hardening | Emergency access account design and MFA exclusion rationale |
 | Governance | Standard Operating Procedures (SOPs) and audit trail documentation |
-| Infrastructure-as-Code | Repeatable script-driven configuration (no ClickOps) |
+| Infrastructure-as-Code | Repeatable script- driven configuration |
 
 ---
 
@@ -26,8 +26,8 @@ Every decision includes the *why* behind it so the design can be defended in an 
 
 ### Phase 1 — Emergency Access ("Break Glass")
 
-A dedicated **Global Administrator break-glass account** has been provisioned following
-Microsoft's emergency access best practices.
+A dedicated **Global Administrator break glass account** has been provisioned following
+Microsofts emergency access best practices.
 
 - Provisioned via **Azure CLI** (documented, repeatable)
 - Intentionally **excluded from standard MFA policy scope** in production design
@@ -42,9 +42,9 @@ Microsoft's emergency access best practices.
 
 > **Why exclude it from MFA?**
 > If your Identity Provider (e.g., Authenticator app, FIDO2 key) experiences an outage,
-> standard MFA-enforced accounts become inaccessible — locking you out of your own tenant.
-> The break-glass account deliberately bypasses this dependency. It is *not* for day-to-day
-> use. Its use must be logged, alerted on, and reviewed after every activation.
+> standard MFA enforced accounts become inaccessible locking you out of your own tenant
+> The break glass account deliberately bypasses this dependency. It is *not* for day to day
+> use. Its use must be logged, alerted on, and reviewed after every activation
 
 ---
 
@@ -115,29 +115,14 @@ cd C:\dev\Azure-Identity-Lab\scripts
 
 ---
 
-## Demo Flow (for Kellen)
-
-1. Show tenant context and authenticated operator identity.
-2. Prove EmergencyAdmin exists and is enabled.
-3. Prove Global Administrator assignment is present.
-4. Explain why emergency accounts are excluded from normal MFA enforcement in production policy design.
-5. Walk through SOP controls: offline credential storage, no daily use, and post-use audit checklist.
-
-For each step, explain:
-- **What** command/control is being shown
-- **Why** it lowers lockout risk or improves governance
-- **Risk if missing** in a real tenant
-
----
-
 ## Security Notes
 
 - **No secrets or credentials are stored in this repository.**
-- Break-glass account credentials are stored **offline only** (printed, sealed envelope
-  in a physically secured location) per Microsoft's recommended guidance.
-- All scripts use **least-privilege** principles where possible; the break-glass account
-  is the *only* account with standing Global Admin rights.
-- Any activation of the break-glass account should trigger an **Azure Monitor alert**
+- Break glass account credentials are stored **offline only** (printed, sealed envelope
+  in a physically secured location) per Microsoft's recommended guidance (I wanted to follow it as closely as I could lol)
+- All scripts use **least privilege** principles where possible; the break glass account
+  is the *only* account with standing Global Admin rights
+- Any activation of the break glass account should trigger an **Azure Monitor alert**
   and be reviewed within 24 hours.
 
 ---
@@ -149,5 +134,3 @@ For each step, explain:
 - [NIST SP 800-53: AC-2 Account Management](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final)
 
 ---
-
-*Lab Author: Cybersecurity Student | Reviewed for demo: Wednesday*
